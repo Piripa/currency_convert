@@ -10,6 +10,8 @@ module com.vinidev.convertmoedas {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires org.json;
+    requires java.desktop;
 
     opens com.vinidev.convertmoedas to javafx.fxml;
     exports com.vinidev.convertmoedas;
