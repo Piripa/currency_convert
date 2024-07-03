@@ -12,20 +12,37 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    private static Stage stage;
+
+    private static Scene mainScene;
+    private static Scene moedasScene;
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
+    public void start(Stage primaryStage) throws IOException {
+        stage = primaryStage;
+        stage.setTitle("Conversor");
+        FXMLLoader fxmlMain = new FXMLLoader(HelloApplication.class.getResource("menu.fxml"));
+        mainScene = new Scene(fxmlMain.load(), 280, 60);
+
+        FXMLLoader fxmlMoedas = new FXMLLoader(HelloApplication.class.getResource("conversormoedas.fxml"));
+        moedasScene = new Scene(fxmlMoedas.load(), 300, 600);
+        stage.setScene(mainScene);
         stage.show();
+    }
+
+    public static void changeScreen(String src){
+        switch(src){
+            case "menu":
+                stage.setScene(mainScene);
+                break;
+            case "moedas":
+                stage.setScene(moedasScene);
+                break;
+        }
     }
 
     public static void main(String[] args) throws Exception {
         launch();
-        Moeda moeda = new Moeda("USD",10,"BRL");
-        ConfigCotacao configCotacao = new ConfigCotacao(moeda);
-        Double resultado = configCotacao.getConvertValue();
-        System.out.println("O resultado da conversão de " + configCotacao.getName() + " é igual a R$ " + String.format("%.2f",resultado));
     }
 }

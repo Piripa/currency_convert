@@ -15,4 +15,6 @@ module com.vinidev.convertmoedas {
 
     opens com.vinidev.convertmoedas to javafx.fxml;
     exports com.vinidev.convertmoedas;
+    exports com.vinidev.convertmoedas.controller;
+    opens com.vinidev.convertmoedas.controller to javafx.fxml;
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="273.0" style="-fx-background-color: #62bf52;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vinidev.convertmoedas.controller.MenuController">
+   <children>
+      <Label prefHeight="22.0" prefWidth="269.0" text="Selecione o conversor desejado:" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </Label>
+      <MenuButton fx:id="menuOpcoes" mnemonicParsing="false" prefHeight="27.0" prefWidth="259.0" style="-fx-background-color: white;" text="Selecionar">
+        <items>
+          <MenuItem fx:id="menuMoedas" mnemonicParsing="false" onAction="#changeScreenMoedas" text="Conversor de Moedas" />
+          <MenuItem mnemonicParsing="false" text="Conversor de Tempetura" />
+            <MenuItem mnemonicParsing="false" text="Conversor de Unidade de Medida" />
+        </items>
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </MenuButton>
+   </children>
+</VBox>
