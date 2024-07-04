@@ -26,6 +26,5 @@ public class MenuController {
 }
     public void changeScreenMoedas(ActionEvent actionEvent) {
         HelloApplication.changeScreen("moedas");
-        System.out.println(menuOpcoes.getOnHidden());
     }
 }

@@ -22,8 +22,4 @@ public class ConfigCotacao {
     public String getName() {
         return name;
     }
-
-
-
-
 }

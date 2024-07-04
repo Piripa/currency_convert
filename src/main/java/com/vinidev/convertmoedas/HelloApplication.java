@@ -14,7 +14,6 @@ import java.io.IOException;
 public class HelloApplication extends Application {
 
     private static Stage stage;
-
     private static Scene mainScene;
     private static Scene moedasScene;
 
@@ -26,7 +25,7 @@ public class HelloApplication extends Application {
         mainScene = new Scene(fxmlMain.load(), 280, 60);
 
         FXMLLoader fxmlMoedas = new FXMLLoader(HelloApplication.class.getResource("conversormoedas.fxml"));
-        moedasScene = new Scene(fxmlMoedas.load(), 300, 600);
+        moedasScene = new Scene(fxmlMoedas.load(), 500, 300);
         stage.setScene(mainScene);
         stage.show();
     }
