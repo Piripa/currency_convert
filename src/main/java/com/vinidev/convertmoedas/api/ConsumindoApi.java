@@ -10,7 +10,7 @@ import java.net.URL;
 
 public class ConsumindoApi {
 
-    private static String api =  "https://economia.awesomeapi.com.br/json/last/";
+    private  String api =  "https://economia.awesomeapi.com.br/json/last/";
 
    public JSONObject getJsonAPI(String moedaOrigem, String moedaDestino) throws Exception {
        this.api = api + moedaOrigem +"-"+moedaDestino;

@@ -31,11 +31,9 @@ public class Moeda {
         this.valorMoedaOrigem = valorMoedaOrigem;
     }
 
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "Moeda Destino " + getMoedaDestino() + " Moeda Origem " + getMoedaOrigem() + " Value " + getValorMoedaOrigem();
+    }
 }
 
