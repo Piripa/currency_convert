@@ -79,17 +79,11 @@ public class ConversorMoedasController {
 
     public void converterMoeda(ActionEvent actionEvent){
         try {
-            System.out.println("selectMoedas.getText(): " + selectMoedas.getText());
             String[] escolhaConversao = selectMoedas.getText().split("-");
-            System.out.println("Moeda origem: " + escolhaConversao[0]);
-            System.out.println("Moeda destino: " + escolhaConversao[1]);
             double value = Double.valueOf(getValue.getText()).doubleValue();
-            System.out.println("Valor convertido: " + value);
             Moeda moeda = new Moeda(escolhaConversao[0],value,escolhaConversao[1]);
-            System.out.println(moeda.toString());
             ConfigCotacao configCotacao = new ConfigCotacao(moeda);
             Double resultado = configCotacao.getConvertValue();
-            System.out.println("Resultado da conversão: " + resultado);
             setText.setText("O resultado da conversão de " + configCotacao.getName() + " é igual a R$ " + String.format("%.2f",resultado));
             getValue.clear();
         }catch (Exception e){
@@ -99,6 +93,6 @@ public class ConversorMoedasController {
     }
 
     public void onClickBack(ActionEvent actionEvent) {
-        HelloApplication.changeScreen("menu");
+        HelloApplication.changeScreen("back");
     }
 }
