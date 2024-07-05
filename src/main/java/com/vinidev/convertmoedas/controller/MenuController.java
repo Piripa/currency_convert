@@ -27,4 +27,8 @@ public class MenuController {
     public void changeScreenMoedas(ActionEvent actionEvent) {
         HelloApplication.changeScreen("moedas");
     }
+
+    public void quitClick(ActionEvent actionEvent) {
+        HelloApplication.changeScreen("quit");
+    }
 }

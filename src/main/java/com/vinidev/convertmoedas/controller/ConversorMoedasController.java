@@ -87,7 +87,7 @@ public class ConversorMoedasController {
             setText.setText("O resultado da conversão de " + configCotacao.getName() + " é igual a R$ " + String.format("%.2f",resultado));
             getValue.clear();
         }catch (Exception e){
-            e.printStackTrace();
+            HelloApplication.changeScreen("error");
         }
 
     }

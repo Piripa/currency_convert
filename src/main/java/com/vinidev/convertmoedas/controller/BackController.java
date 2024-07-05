@@ -13,13 +13,13 @@ public class BackController {
 
     @FXML
     void clickNo(ActionEvent event) {
-        HelloApplication.changeScreen("menu");
+        HelloApplication.changeScreen("quit");
 
     }
 
     @FXML
     void clickYes(ActionEvent event) {
-        HelloApplication.changeScreen("quit");
+        HelloApplication.changeScreen("menu");
 
     }
 
